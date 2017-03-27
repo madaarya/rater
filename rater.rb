@@ -67,18 +67,13 @@ gem_group :production do
 end
 
 gem_group :development do
-  gem 'thin'
   gem 'byebug'
   gem 'foreman'
   gem 'pry-byebug'
-  gem 'letter_opener_web', '~> 1.2.0'
   gem 'rails_best_practices'
   gem 'pry-rails'
-  gem 'quiet_assets'
   gem 'annotate', github: 'ctran/annotate_models'
   gem 'rack-mini-profiler', require: false
-  gem 'better_errors'
-  gem 'binding_of_caller'
   gem 'bullet'
   gem 'meta_request'
   gem 'awesome_print'
