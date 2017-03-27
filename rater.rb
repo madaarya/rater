@@ -94,7 +94,6 @@ gem_group :test, :development do
   gem 'formulaic'
   gem 'shoulda-matchers', require: false
   gem 'database_cleaner'
-  gem 'letter_opener_web', '~> 1.2.0'
   gem 'timecop-console', :require => 'timecop_console'
   gem 'capybara'
   gem 'capybara-webkit'
