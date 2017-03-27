@@ -65,7 +65,6 @@ gem 'devise-bootstrap-views'
 
 gem_group :production do 
   gem 'exception_notification'
-  gem 'puma'
 end
 
 gem_group :development do
