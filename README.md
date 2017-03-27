@@ -96,10 +96,3 @@ It is free software,
 and may be redistributed under the terms specified in the [LICENSE] file.
 
 [LICENSE]: LICENSE
-
-## About 41studio
-
-![41studio](https://fourtyonestudio-staging.s3.amazonaws.com/production/41studio-logo-ec333a1c8495d35e96a13e415d7579f0.png)
-
-rater is maintained and funded by 41studio, inc.
-The names and logos for 41studio are trademarks of 41studio, inc.
