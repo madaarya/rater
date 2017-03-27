@@ -80,11 +80,13 @@ gem_group :development do
 end
 
 gem_group :test, :development do
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
+  gem 'capistrano3-puma', github: "seuros/capistrano-puma"
   gem 'rspec-rails'
   gem 'formulaic'
   gem 'shoulda-matchers', require: false
   gem 'database_cleaner'
-  gem 'timecop-console', :require => 'timecop_console'
   gem 'capybara'
   gem 'capybara-webkit'
   gem 'capybara-email' 
@@ -167,4 +169,5 @@ after_bundle do
   generate 'rspec:install'
   generate 'devise:install'
   generate "generate devise #{user.camelcase}"
+  run "bundle exec cap install"
 end
