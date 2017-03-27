@@ -48,7 +48,6 @@ gem 'devise'
 gem 'devise-async'
 gem 'mini_magick'
 gem 'carrierwave'
-gem 'carrierwave_backgrounder'
 gem 'kaminari'
 gem 'holder_rails'
 gem "twitter-bootstrap-rails"
@@ -176,8 +175,6 @@ after_bundle do
   generate 'carrierwave_backgrounder:install'
   generate 'rails_admin:install'
   generate "devise:views:locale #{locale}" 
-  gsub_file 'config/initializers/carrierwave_backgrounder.rb', /c.backend :delayed_job, queue: :carrierwave\n/ , ''
-  gsub_file 'config/initializers/carrierwave_backgrounder.rb', /# c.backend :sidekiq, queue: :carrierwave\n/ , 'c.backend :sidekiq, queue: :carrierwave'
   generate 'rspec:install'
   generate 'devise:install'
   generate "generate devise #{user.camelcase}"
