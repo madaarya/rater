@@ -35,7 +35,6 @@ database_adapter = multiple_choice "Database used in development?", [["PostgreSQ
 db_username = ask_wizard("Database username?")
 db_password = ask_wizard("Database Password for user #{db_username}?")
 locale = ask_wizard("Locale?")
-user = ask_wizard("resource model for devise?")
 
 if database_adapter == "postgresql"
   gem 'pg'
@@ -168,6 +167,6 @@ after_bundle do
   generate "devise:views:locale #{locale}" 
   generate 'rspec:install'
   generate 'devise:install'
-  generate "generate devise #{user.camelcase}"
+  generate "devise:views:bootstrap_slim_templates"
   run "bundle exec cap install"
 end
